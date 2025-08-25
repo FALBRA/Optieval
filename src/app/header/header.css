@@ -1,0 +1,21 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    .usuario{
+        display: flex;
+        align-items: center;
+        margin: 5px 10px;
+        .material-icons{
+            font-size: 32px;
+            color: #1f2937;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        p{
+            font-size: 18px;
+            color: #1f2937;
+            cursor: pointer;
+        }
+    }
+}
