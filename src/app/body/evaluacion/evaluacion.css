@@ -1,0 +1,82 @@
+section{
+    width: calc(100% - 20px);
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        width: calc(100% - 20px);
+        align-items: center;
+        justify-content: center;
+        .header{
+            width: calc(100% - 10px);
+            display: flex;
+            justify-content: space-between;
+            margin: 5px;
+            p{
+                margin: 0;
+                font-size: 20px;
+                color: #1f2937;
+            }
+            button{
+                background: #0ea5e9;
+                border: 2px solid #0ea5e9;
+                color: #ffffff;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+            button:hover{
+                transform: scale(1.05);
+            }
+            button:active{
+                background: #ffffff;
+                border: 2px solid #0ea5e9;
+                color: #0ea5e9;
+            }
+        }
+        .buscador{
+            width: calc(100% - 10px);
+            display: flex;
+            margin: 5px;
+            input{
+                width: 100%;
+                border-radius: 0;
+                border: none;
+                border-bottom: 2px solid #1f2937;
+                background: #f3f4f6;
+                padding: 10px;
+                font-family: "bree-serif", serif;
+                outline: none;
+                font-size: 13px;
+            }
+        }
+        .table{
+            width: calc(100% - 10px);
+            display: flex;
+            margin: 5px;
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                thead{
+                    background-color: #1f2937;
+                    color: #ffffff;
+                }
+                th, td{
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+}
