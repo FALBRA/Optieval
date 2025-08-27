@@ -38,7 +38,7 @@
                         <button class="btn cargar" (click)="abrirPushEvaluacion(element)">
                             <span class="material-icons">difference</span>
                         </button>
-                        <button class="btn reporte">
+                        <button class="btn reporte" (click)="abrirReportEvaluacion()">
                             <span class="material-icons">assignment</span>
                         </button>
                         <button class="btn config" (click)="abrirConfigEvaluacion()">
@@ -64,4 +64,4 @@
 <app-deleteevaluacion *ngIf="mostrarDeleteEvaluacion" (cerrarEvent)="cerrarDeleteEvaluacion()"></app-deleteevaluacion>
 <app-editevaluacion *ngIf="mostrarEditEvaluacion" (cerrarEvent)="cerrarEditEvaluacion()"></app-editevaluacion>
 <app-pushevaluacion *ngIf="mostrarPushEvaluacion" [evaluacion]="evaluacionSeleccionada" (cerrarEvent)="cerrarPushEvaluacion()"></app-pushevaluacion>
-<app-reportevaluacion></app-reportevaluacion>
+<app-reportevaluacion *ngIf="mostrarReportEvaluacion" (cerrarEvent)="cerrarReportEvaluacion()"></app-reportevaluacion>

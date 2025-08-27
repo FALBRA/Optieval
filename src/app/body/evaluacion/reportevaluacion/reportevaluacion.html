@@ -1,1 +1,147 @@
-<p>reportevaluacion works!</p>
+<section (click)="cerrar()">
+    <div class="modal">
+        <div class="container" (click)="$event.stopPropagation()">
+            <div class="header">
+                <p>REPORTES Y OBSERVACIONES</p>
+                <span class="material-icons" (click)="cerrar()">cancel</span>
+            </div>
+            <div class="report">
+                <div class="btns">
+                    <button class="actualizar">
+                        Actualizar Reporte
+                    </button>
+                    <button class="reportobs">
+                        Reporte obs
+                    </button>
+                </div>
+                <div class="abc">
+                    <div class="a">
+                        <div class="titulo">
+                            <p>A.</p>
+                            <p>Lecturas</p>
+                        </div>
+                        <div class="contenido">
+                            <div class="one">
+                                <div class="left">
+                                    <p>A.1</p>
+                                    <p>Total de lecturas</p>
+                                </div>
+                                <div class="right">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                            <div class="two">
+                                <div class="left">
+                                    <p>A.2</p>
+                                    <p>Total de lecturas de asistencia</p>
+                                </div>
+                                <div class="right">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                            <div class="thri">
+                                <div class="left">
+                                    <p>A.3</p>
+                                    <p>Total de respuestas</p>
+                                </div>
+                                <div class="right">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                            <div class="four">
+                                <div class="left">
+                                    <p>A.4</p>
+                                    <p>Total de lecturas sin longitud minima especificada (lecturas vacias)</p>
+                                </div>
+                                <div class="right">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="b">
+                        <div class="titulo">
+                            <p>B.</p>
+                            <p>Situaciones Externas</p>
+                        </div>
+                        <div class="contenido">
+                            <div class="one">
+                                <div class="left">
+                                    <p>B.1</p>
+                                    <p>Fichas de asistencia con código de postulante o DNI no encontrado</p>
+                                </div>
+                                <div class="right">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                            <div class="two">
+                                <div class="left">
+                                    <p>B.2</p>
+                                    <p>Ficha de asistencia con duplicidad</p>
+                                </div>
+                                <div class="right">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                            <div class="thri">
+                                <div class="left">
+                                    <p>B.3</p>
+                                    <p>Fichas de respuesta sin ficha de asistencia</p>
+                                </div>
+                                <div class="right">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                            <div class="four">
+                                <div class="left">
+                                    <p>B.4</p>
+                                    <p>Fichas de respuestas con duplicidad</p>
+                                </div>
+                                <div class="right">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="left">
+                                    <p>B.5</p>
+                                    <p>Fichas sin tipo de prueba lecturadas</p>
+                                </div>
+                                <div class="right">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c">
+                        <div class="titulo">
+                            <p>C.</p>
+                            <p>Examen</p>
+                        </div>
+                        <div class="contenido">
+                            <div class="one">
+                                <div class="left">
+                                    <p>C.1</p>
+                                    <p>Total de fichas procesadas</p>
+                                </div>
+                                <div class="right">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                            <div class="two">
+                                <div class="left">
+                                    <p>C.2</p>
+                                    <p>Total de fichas procesadas</p>
+                                </div>
+                                <div class="right">
+                                    <p>0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

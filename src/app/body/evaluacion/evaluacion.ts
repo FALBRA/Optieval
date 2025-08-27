@@ -36,6 +36,7 @@ export class Evaluacion {
   mostrarDeleteEvaluacion = false;
   mostrarConfigEvaluacion = false;
   mostrarPushEvaluacion = false;
+  mostrarReportEvaluacion = false;
 
   evaluacionSeleccionada?: evaluaciones;
 
@@ -73,5 +74,12 @@ export class Evaluacion {
   }
   cerrarPushEvaluacion() {
     this.mostrarPushEvaluacion = false;
+  }
+
+  abrirReportEvaluacion() {
+    this.mostrarReportEvaluacion = true;
+  }
+  cerrarReportEvaluacion() {
+    this.mostrarReportEvaluacion = false;
   }
 }
