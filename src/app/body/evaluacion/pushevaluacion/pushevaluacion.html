@@ -1,0 +1,52 @@
+<section (click)="cerrar()">
+    <div class="modal">
+        <div class="container" (click)="$event.stopPropagation()">
+            <div class="header">
+                <p>{{ evaluacion?.nombre }}</p>
+                <span class="material-icons" (click)="cerrar()">cancel</span>
+            </div>
+            <div class="options">
+                <div class="verConfigPunt">
+                    <button>
+                        Ver Configuración de Puntuación
+                    </button>
+                </div>
+                <form action="">
+                    <div class="fichaRC">
+                        <input type="file" #fichaRC hidden>
+                        <button type="button" (click)="fichaRC.click()">Ficha de respuesta correcta</button>
+                    </div>
+                    <div class="fichaP">
+                        <input type="file" #fichaP hidden>
+                        <button type="button" (click)="fichaP.click()">Ficha de ponderación</button>
+                    </div>
+                    <div class="fichaIP">
+                        <input type="file" #fichaIP hidden>
+                        <button type="button" (click)="fichaIP.click()">Ficha de identidad de postulante</button>
+                    </div>
+                    <div class="formatoRP">
+                        <input type="file" #formatoRP hidden>
+                        <button type="button" (click)="formatoRP.click()">Formato de respuestas de postulantes</button>
+                    </div>
+                </form>
+                <div class="ver-rep-cal">
+                    <div class="ver-rep">
+                        <button>Ver importaciones</button>
+                        <button>Reportes</button>
+                    </div>
+                    <div class="cal">
+                        <button>Calcular Puntajes y Resultados</button>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="reiniciar">
+                        Reiniciar Puntajes
+                    </button>
+                    <button class="resetear">
+                        Resetear Evaluación
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

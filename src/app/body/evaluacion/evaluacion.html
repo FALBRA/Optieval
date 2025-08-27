@@ -1,0 +1,67 @@
+<section>
+    <div class="container">
+        <div class="header">
+            <p>EVALUACIONES</p>
+            <button (click)="abrirAddEvaluacion()">
+                <span class="material-icons">add</span>
+            </button>
+        </div>
+        <div class="buscador">
+            <input type="text" placeholder="Ingrese Busqueda">
+        </div>
+        <div class="table">     
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="nombre">
+                    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                    <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="entidad">
+                    <th mat-header-cell *matHeaderCellDef> Entidad </th>
+                    <td mat-cell *matCellDef="let element"> {{element.entidad}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="fecha">
+                    <th mat-header-cell *matHeaderCellDef> Fecha </th>
+                    <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="accion">
+                    <th mat-header-cell *matHeaderCellDef>Acción</th>
+                    <td mat-cell *matCellDef="let element">
+                        <button class="btn cargar" (click)="abrirPushEvaluacion(element)">
+                            <span class="material-icons">difference</span>
+                        </button>
+                        <button class="btn reporte" (click)="abrirReportEvaluacion()">
+                            <span class="material-icons">assignment</span>
+                        </button>
+                        <button class="btn config" (click)="abrirConfigEvaluacion()">
+                            <span class="material-icons">settings</span>
+                        </button>
+                        <button class="btn edit" (click)="abrirEditEvaluacion()">
+                            <span class="material-icons">edit</span>
+                        </button>
+                        <button class="btn delete">
+                            <span class="material-icons" (click)="abrirDeleteEvaluacion()">delete</span>
+                        </button>
+                    </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+</section>
+
+<app-addevaluacion *ngIf="mostrarAddEvaluacion" (cerrarEvent)="cerrarAddEvaluacion()"></app-addevaluacion>
+<app-configevaluacion *ngIf="mostrarConfigEvaluacion" (cerrarEvent)="cerrarConfigEvaluacion()"></app-configevaluacion>
+<app-deleteevaluacion *ngIf="mostrarDeleteEvaluacion" (cerrarEvent)="cerrarDeleteEvaluacion()"></app-deleteevaluacion>
+<app-editevaluacion *ngIf="mostrarEditEvaluacion" (cerrarEvent)="cerrarEditEvaluacion()"></app-editevaluacion>
+<app-pushevaluacion *ngIf="mostrarPushEvaluacion" [evaluacion]="evaluacionSeleccionada" (cerrarEvent)="cerrarPushEvaluacion()"></app-pushevaluacion>
+<app-reportevaluacion *ngIf="mostrarReportEvaluacion" (cerrarEvent)="cerrarReportEvaluacion()"></app-reportevaluacion>

@@ -1,0 +1,40 @@
+<section>
+    <div class="container">
+        <div class="logo">
+            <p *ngIf="!isCollapsed">LOGO</p>
+            <button class="btn-plegar" (click)="toggleMenu()">
+                <span class="material-icons">dehaze</span>
+            </button>
+        </div>
+        <div class="options">
+            <div class="evaluacion">
+                <span class="material-icons">feed</span>
+                <p *ngIf="!isCollapsed">Evaluación</p>
+            </div>
+            <div class="postulante">
+                <span class="material-icons">group</span>
+                <p *ngIf="!isCollapsed">Postulantes</p>
+            </div>
+            <div class="historial">
+                <span class="material-icons">history</span>
+                <p *ngIf="!isCollapsed">Historial</p>
+            </div>
+            <div class="incidencias">
+                <span class="material-icons">warning</span>
+                <p *ngIf="!isCollapsed">Incidencias</p>
+            </div>
+            <div class="reporte">
+                <span class="material-icons">report</span>
+                <p *ngIf="!isCollapsed">Reportes</p>
+            </div>
+            <div class="usuario">
+                <span class="material-icons">account_box</span>
+                <p *ngIf="!isCollapsed">Usuarios</p>
+            </div>
+            <div class="configuracion">
+                <span class="material-icons">settings</span>
+                <p *ngIf="!isCollapsed">Configuración</p>
+            </div>
+        </div>
+    </div>
+</section>

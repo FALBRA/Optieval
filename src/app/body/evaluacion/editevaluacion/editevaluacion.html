@@ -1,0 +1,23 @@
+<section (click)="cerrar()">
+    <div class="modal">
+        <div class="container" (click)="$event.stopPropagation()">
+            <div class="header">
+                <p>EDITAR EVALUACIÓN</p>
+                <span class="material-icons" (click)="cerrar()">cancel</span>
+            </div>
+            <div class="formulario">
+                <form action="">
+                    <p>FORMULARIO PARA EDITAR UNA NUEVA EVALUACIÓN</p>
+                    <div class="btns">
+                        <button class="save">
+                            GUARDAR
+                        </button>
+                        <button class="cancel" (click)="cerrar()">
+                            CANCEL
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
