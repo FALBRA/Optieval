@@ -1,10 +1,10 @@
 import {
+  isPlatformBrowser
+} from "./chunk-OTHYC6WR.js";
+import {
   BidiModule,
   Directionality
-} from "./chunk-X4CR6CSP.js";
-import {
-  isPlatformBrowser
-} from "./chunk-Y4JH4JYD.js";
+} from "./chunk-AE3VYFTC.js";
 import {
   APP_ID,
   ApplicationRef,
@@ -106,7 +106,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-7V4JGFM7.js";
+} from "./chunk-UA7STYQP.js";
 
 // node_modules/@angular/cdk/fesm2022/data-source.mjs
 var DataSource = class {

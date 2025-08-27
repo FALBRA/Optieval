@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
+import { evaluaciones } from '../evaluacion';
 
 @Component({
   selector: 'app-pushevaluacion',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './pushevaluacion.css'
 })
 export class Pushevaluacion {
+  @Input() evaluacion?: evaluaciones;
+  @Output() cerrarEvent = new EventEmitter<void>();
 
+  cerrar() {
+    this.cerrarEvent.emit();
+  }
 }

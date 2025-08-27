@@ -1,1 +1,22 @@
-<p>deleteevaluacion works!</p>
+<section (click)="cerrar()">
+    <div class="modal">
+        <div class="container"(click)="$event.stopPropagation()">
+            <div class="header">
+                <p>NUEVA EVALUACIÓN</p>
+                <span class="material-icons" (click)="cerrar()">cancel</span>
+            </div>
+            <div class="confirm">
+                <p>¿ELIMINAR EVALUACIÓN N° []?</p>
+                <p>[Nombre de la evaluación]</p>
+                <div class="btns">
+                    <button class="delete">
+                        ELIMINAR
+                    </button>
+                    <button class="cancel" (click)="cerrar()">
+                        CANCEL
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

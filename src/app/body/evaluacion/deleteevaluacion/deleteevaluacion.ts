@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-deleteevaluacion',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './deleteevaluacion.css'
 })
 export class Deleteevaluacion {
+  @Output() cerrarEvent = new EventEmitter<void>();
 
+  cerrar() {
+    this.cerrarEvent.emit();
+  }
 }

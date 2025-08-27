@@ -1,14 +1,16 @@
-section{
+section {
     width: 100%;
     height: calc(100vh - 66px);
     background: #1f29377e;
-    .modal{
+
+    .modal {
         height: calc(100%-40px);
         display: flex;
         align-items: flex-start;
         justify-content: center;
         padding: 20px;
-        .container{
+
+        .container {
             background: #1f2937;
             display: flex;
             flex-direction: column;
@@ -16,21 +18,94 @@ section{
             justify-content: center;
             padding: 10px;
             border-radius: 10px;
-            .header{
+
+            .header {
+                width: 100%;
                 color: #ffffff;
                 position: relative;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 padding: 0 0 10px 0;
-                p{
+
+                p {
                     margin: 0 30px;
                     font-size: 15px
                 }
-                span{
+
+                span {
                     cursor: pointer;
                     position: absolute;
                     right: 0;
+                    transition: all 0.3s ease;
+                }
+
+                span:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .formulario {
+                background: #ffffff;
+                border-radius: 10px;
+                padding: 10PX;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                form {
+                    padding: 5px;
+
+                    P {
+                        color: #1f2937;
+                        margin: 0 0 15px 0;
+                    }
+
+                    .btns {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 5px;
+
+                        button {
+                            margin: 0 5px;
+                            padding: 5px 15px;
+                            border-radius: 100px;
+                            border: none;
+                            color: #ffffff;
+                            cursor: pointer;
+                            font-family: "Bree Serif", serif;
+                            transition: all 0.3s ease;
+                        }
+
+                        button:hover {
+                            transform: scale(1.08);
+                        }
+
+                        button:active {
+                            transform: scale(1.08);
+                            background-color: #ffffff;
+                        }
+
+                        .save {
+                            background: #0ea5e9;
+                            border: solid 2px #0ea5e9;
+                        }
+
+                        .save:active {
+                            color: #0ea5e9;
+                        }
+
+                        .cancel {
+                            background: #1f2937;
+                            border: solid 2px #1f2937;
+                        }
+
+                        .cancel:active {
+                            color: #1f2937;
+                        }
+                    }
                 }
             }
         }

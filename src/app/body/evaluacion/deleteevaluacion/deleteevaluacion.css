@@ -1,0 +1,93 @@
+section{
+    width: 100%;
+    height: calc(100vh - 66px);
+    background: #1f29377e;
+    .modal{
+        height: calc(100%-40px);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 20px;
+        .container{
+            background: #1f2937;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 10px;
+            .header{
+                width: 100%;
+                color: #ffffff;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0 10px 0;
+                p{
+                    margin: 0 30px;
+                    font-size: 15px
+                }
+                span{
+                    cursor: pointer;
+                    position: absolute;
+                    right: 0;
+                    transition: all 0.3s ease;
+                }
+                span:hover{
+                    transform: scale(1.1);
+                }
+            }
+            .confirm{
+                background: #ffffff;
+                border-radius: 10px;
+                padding: 10PX;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                p{
+                    color: #1f2937;
+                    margin: 5px;
+                }
+                .btns{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 5px;
+                    button{
+                        margin: 0 5px;
+                        padding: 5px 15px;
+                        border-radius: 100px;
+                        border: none;
+                        color: #ffffff;
+                        cursor: pointer;
+                        font-family: "Bree Serif", serif;
+                        transition: all 0.3s ease;
+                    }
+                    button:hover{
+                        transform: scale(1.08);
+                    }
+                    button:active{
+                        transform: scale(1.08);
+                        background-color: #ffffff;
+                    }
+                    .delete{
+                        background: #ef4444;
+                        border: solid 2px #ef4444;
+                    }
+                    .delete:active{
+                        color: #ef4444;
+                    }
+                    .cancel{
+                        background: #1f2937;
+                        border: solid 2px #1f2937;
+                    }
+                    .cancel:active{
+                        color: #1f2937;
+                    }
+                }
+            }
+        }
+    }
+}

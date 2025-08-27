@@ -54,7 +54,7 @@ section{
                 border-bottom: 2px solid #1f2937;
                 background: #f3f4f6;
                 padding: 10px;
-                font-family: "bree-serif", serif;
+                font-family: "bree serif", serif;
                 outline: none;
                 font-size: 13px;
             }
@@ -132,6 +132,35 @@ section{
 }
 
 app-addevaluacion{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+app-editevaluacion{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+app-deleteevaluacion{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+app-configevaluacion{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+app-pushevaluacion{
     width: 100%;
     height: 100%;
     position: absolute;

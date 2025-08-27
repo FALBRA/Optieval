@@ -1,1 +1,127 @@
-<p>configevaluacion works!</p>
+<section (click)="cerrar()">
+    <div class="modal">
+        <div class="container" (click)="$event.stopPropagation()">
+            <div class="header">
+                <p>CONFIGURACIÓN DE EVALUACIÓN</p>
+                <span class="material-icons" (click)="cerrar()">cancel</span>
+            </div>
+            <div class="formulario">
+                <form [formGroup]="configEvaluacionForm" (ngSubmit)="onSubmit()">
+                    <div class="labels">
+                        <div class="firstq">
+                            <label>
+                                Cantidad de preguntas
+                                <input type="number" placeholder="100" formControlName="cantPreg">
+                            </label>
+                            <div *ngIf="configEvaluacionForm.get('cantPreg')?.invalid && configEvaluacionForm.get('cantPreg')?.touched">
+                                Campo requerido
+                            </div>
+                        </div>
+
+                        <div class="secondq">
+                            <div class="cant-puntuacion">
+                                <label>
+                                    Configuración de puntuación
+                                    <input type="number" placeholder="2" formControlName="configPunt">
+                                </label>
+                                <div *ngIf="configEvaluacionForm.get('configPunt')?.invalid && configEvaluacionForm.get('configPunt')?.touched">
+                                    Campo requerido
+                                </div>
+                            </div>
+                            <div class="puntuaciones">
+                                <div class="rango-punt">
+                                    <div class="rango">
+                                        <label>
+                                            Rango
+                                            <input type="text" placeholder="1-60" formControlName="rango">
+                                        </label>
+                                        <div *ngIf="configEvaluacionForm.get('rango')?.invalid && configEvaluacionForm.get('rango')?.touched">
+                                            Campo requerido
+                                        </div>
+                                    </div>
+                                    <div class="punt">
+                                        <label>
+                                            Puntuación
+                                            <input type="number" placeholder="9.5" formControlName="punt">
+                                        </label>
+                                        <div *ngIf="configEvaluacionForm.get('punt')?.invalid && configEvaluacionForm.get('punt')?.touched">
+                                            Campo requerido
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rango-punt">
+                                    <div class="rango">
+                                        <label>
+                                            Rango
+                                            <input type="text" placeholder="61-100" formControlName="rango">
+                                        </label>
+                                        <div *ngIf="configEvaluacionForm.get('rango')?.invalid && configEvaluacionForm.get('rango')?.touched">
+                                            Campo requerido
+                                        </div>
+                                    </div>
+                                    <div class="punt">
+                                        <label>
+                                            Puntuación
+                                            <input type="number" placeholder="11" formControlName="punt">
+                                        </label>
+                                        <div *ngIf="configEvaluacionForm.get('punt')?.invalid && configEvaluacionForm.get('punt')?.touched">
+                                            Campo requerido
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thirdq">
+                            <label>
+                                Puntaje mínimo aprobado
+                                <input type="number" placeholder="400.0" formControlName="puntMin">
+                            </label>
+                            <div *ngIf="configEvaluacionForm.get('puntMin')?.invalid && configEvaluacionForm.get('puntMin')?.touched">
+                                Campo requerido
+                            </div>
+                        </div>
+
+                        <div class="fourthq">
+                            <label>
+                                Usar sistema vigesimal
+                                <input type="checkbox" formControlName="sistemVige">
+                            </label>
+                        </div>
+
+                        <div class="fivethq">
+                            <label>
+                                Modo de calculo del resultado
+                                <select formControlName="calcResult">
+                                    <option value="">Seleccionar</option>
+                                    <option value="1">Examen</option>
+                                </select>
+                            </label>
+                            <div *ngIf="configEvaluacionForm.get('calcResult')?.invalid && configEvaluacionForm.get('calcResult')?.touched">
+                                Campo requerido
+                            </div>
+                        </div>
+
+                        <div class="sixthq">
+                            <label>
+                                Cantidad de decimales a mostrar
+                                <input type="number" placeholder="2" formControlName="cantDecimales">
+                            </label>
+                            <div *ngIf="configEvaluacionForm.get('cantDecimales')?.invalid && configEvaluacionForm.get('cantDecimales')?.touched">
+                                Error
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <button class="save">
+                            GUARDAR
+                        </button>
+                        <button class="cancel" (click)="cerrar()">
+                            CANCEL
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
