@@ -2,10 +2,10 @@ import { createRequire } from 'module';const require = createRequire(import.meta
 import {
   BidiModule,
   Directionality
-} from "./chunk-XQQ2F7YT.js";
+} from "./chunk-4MC26QNG.js";
 import {
   isPlatformBrowser
-} from "./chunk-BQGXPASB.js";
+} from "./chunk-WOBKOFR2.js";
 import {
   APP_ID,
   ApplicationRef,
@@ -46,7 +46,6 @@ import {
   effect,
   forwardRef,
   inject,
-  require_cjs,
   require_operators,
   setClassMetadata,
   signal,
@@ -83,7 +82,10 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-BWLR3LOX.js";
+} from "./chunk-S75JXF7X.js";
+import {
+  require_cjs
+} from "./chunk-O5J3CNTX.js";
 import {
   __spreadValues,
   __toESM

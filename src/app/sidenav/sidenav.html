@@ -7,11 +7,11 @@
             </button>
         </div>
         <div class="options">
-            <div class="evaluacion">
+            <div class="evaluacion" [class.active]="selected === 'evaluacion'" (click)="select('evaluacion')">
                 <span class="material-icons">feed</span>
                 <p *ngIf="!isCollapsed">Evaluación</p>
             </div>
-            <div class="postulante">
+            <div class="postulante" [class.active]="selected === 'postulante'" (click)="select('postulante')">
                 <span class="material-icons">group</span>
                 <p *ngIf="!isCollapsed">Postulantes</p>
             </div>

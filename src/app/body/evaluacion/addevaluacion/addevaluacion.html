@@ -6,8 +6,36 @@
                 <span class="material-icons" (click)="cerrar()">cancel</span>
             </div>
             <div class="formulario">
-                <form action="">
-                    <p>FORMULARIO PARA AGREGAR UNA NUEVA EVALUACIÓN</p>
+                <form [formGroup]="addEvaluacionForm" (ngSubmit)="onSubmit()">
+                    <div class="labels">
+                        <div class="nameEvaluation">
+                            <label>
+                                Nombre de la Evaluación:
+                                <input type="text" placeholder="simulacro CEPREVAL ciclo B-2026" formControlName="nameEvaluation">
+                            </label>
+                            <div *ngIf="addEvaluacionForm.get('nameEvaluation')?.invalid && addEvaluacionForm.get('nameEvaluation')?.touched">
+                                Escribir el nombre de la evalución.
+                            </div>
+                        </div>
+                        <div class="date">
+                            <label>
+                                Fecha de la Evaluación:
+                                <input type="date" formControlName="dateEvaluation">
+                            </label>
+                            <div *ngIf="addEvaluacionForm.get('dateEvaluation')?.invalid && addEvaluacionForm.get('dateEvaluation')?.touched">
+                                Ingresar la fecha de la evaluación.
+                            </div>
+                        </div>
+                        <div class="entity">
+                            <label>
+                                Entidad que organiza la Evaluación:
+                                <input type="text" placeholder="CEPREVAL" formControlName="entityEvaluation">
+                            </label>
+                            <div *ngIf="addEvaluacionForm.get('entityEvaluation')?.invalid && addEvaluacionForm.get('entityEvaluation')?.touched">
+                                Escribir el nombre de la entidad que organiza la evaluación.
+                            </div>
+                        </div>
+                    </div>
                     <div class="btns">
                         <button class="save">
                             GUARDAR
