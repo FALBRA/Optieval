@@ -6,8 +6,15 @@
                 <span class="material-icons">add</span>
             </button>
         </div>
+        <div class="choose-evaluation">
+            <label for="evaluation">EVALUACIÓ:</label>
+            <select name="evaluation" id="evaluation" (change)="filtrarPorEvaluacion($event)">
+                <option value="">-- Selecciona una evaluación --</option>
+                <option *ngFor="let eval of evaluaciones" [value]="eval">{{ eval }}</option>
+            </select>
+        </div>
         <div class="buscador">
-            <input type="text" placeholder="Ingrese Busqueda">
+            <input type="text" placeholder="Ingrese Busqueda" (input)="filtrarPorBusqueda($event)">
         </div>
         <div class="table">     
             <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
