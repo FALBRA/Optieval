@@ -1,0 +1,112 @@
+<section (click)="cerrar()">
+    <div class="modal">
+        <div class="container" (click)="$event.stopPropagation()">
+            <div class="header">
+                <p>NUEVO POSTULANTE</p>
+                <span class="material-icons" (click)="cerrar()">cancel</span>
+            </div>
+            <div class="formulario">
+                <form>
+                    <div class="labels">
+                        <div class="pagos">
+                            <p>PAGOS</p>
+                            <div class="exoneración">
+                                <label for="">
+                                    ¿Se le exonera del pago?
+                                    <select>
+                                        <option value="">-- Seleccionar exoneración --</option>
+                                        <option value="1">SI</option>
+                                        <option value="2">PARCIAL</option>
+                                        <option value="3">NO</option>
+                                    </select>
+                                </label>
+                                <div>Especificar si se le exonera del pago o no.</div>
+                            </div>
+                            <div class="montoPago">
+                                <label for="">
+                                    Monto a pagar: S/
+                                    <input type="number" placeholder="100">
+                                </label>
+                                <div>Digitar el pago.</div>
+                            </div>
+                            <div class="modoPago">
+                                <label for="">
+                                    Modo de pago:
+                                    <input type="text" placeholder="YAPE">
+                                </label>
+                                <div>Digitar el modo de pago.</div>
+                            </div>
+                        </div>
+                        <div class="personalinfo">
+                            <P>INFORMACIÓN PERSONAL</P>
+                            <div class="dni">
+                                <label for="">
+                                    DNI:
+                                    <input type="number" placeholder="73991573">
+                                </label>
+                                <div>Digite el DNI.</div>
+                            </div>
+                            <div class="firstname">
+                                <label for="">
+                                    NOMBRES:
+                                    <input type="text" placeholder="JOSH GRAJAM">
+                                </label>
+                                <div>Digite los nombres completos.</div>
+                            </div>
+                            <div class="lastnameF">
+                                <label for="">
+                                    APELLIDO PATERNO:
+                                    <input type="text" placeholder="FALCÓN">
+                                </label>
+                                <div>Digite el apellido paterno.</div>
+                            </div>
+                            <div class="lastnameM">
+                                <label for="">
+                                    APELLIDO MATERNO:
+                                    <input type="text" placeholder="CABRA">
+                                </label>
+                                <div>Digite el apellido materno.</div>
+                            </div>
+                            <div class="carrera">
+                                <label for="">
+                                    CARRERA:
+                                    <select>
+                                        <option value="">-- Seleccionar la carrera --</option>
+                                        <option value="1">Medicina humana</option>
+                                        <option value="2">Ing. civil</option>
+                                        <option value="3">Derecho y ciencias políticas</option>
+                                        <option value="4">Educación Inicial</option>
+                                        <option value="5">Odontología</option>
+                                    </select>
+                                </label>
+                                <div>Escoja la carrera.</div>
+                            </div>
+                            <div class="graduation">
+                                <label for="">
+                                    AÑO DE EGRESO:
+                                    <input type="number" placeholder="2020">
+                                </label>
+                                <div>Digite el año de egreso.</div>
+                            </div>
+                            <div class="school">
+                                <label for="">
+                                    COLEGIO:
+                                    <input type="text" placeholder="G.U.E. LEONCIO PRADO">
+                                </label>
+                                <div>Digite el colegio.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <button class="save">
+                            GUARDAR
+                        </button>
+                        <button class="cancel" (click)="cerrar()">
+                            CANCEL
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

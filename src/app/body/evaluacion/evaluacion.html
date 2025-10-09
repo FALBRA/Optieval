@@ -7,7 +7,7 @@
             </button>
         </div>
         <div class="buscador">
-            <input type="text" placeholder="Ingrese Busqueda">
+            <input type="text" placeholder="Ingrese Busqueda" (input)="filtrarPorBusqueda($event)">
         </div>
         <div class="table">     
             <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">

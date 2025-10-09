@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { CommonModule } from '@angular/common';
+import { Addpostulante } from './addpostulante/addpostulante';
+import { Editpostulante } from './editpostulante/editpostulante';
+import { Deletepostulante } from './deletepostulante/deletepostulante';
+import { NgIf } from "@angular/common";
 
 export interface postulantes {
   dni: number;
@@ -21,7 +25,7 @@ const POSTULANTES_DATA: postulantes[] = [
 
 @Component({
   selector: 'app-postulantes',
-  imports: [CommonModule, MatTableModule],
+  imports: [CommonModule, MatTableModule, Addpostulante, NgIf],
   templateUrl: './postulantes.html',
   styleUrl: './postulantes.css'
 })
@@ -33,6 +37,10 @@ export class Postulantes {
   searchTerm: string = '';
 
   evaluaciones: string[] = [];
+
+  mostrarAddPostulante = false;
+  mostrarEditPostulante = false;
+  mostrarDeletePostulante = false;
 
   constructor(){
     this.evaluaciones = Array.from(new Set(POSTULANTES_DATA.map(p => p.evaluacion)));
@@ -62,5 +70,12 @@ export class Postulantes {
   filtrarPorBusqueda(event: Event){
     this.searchTerm = (event.target as HTMLInputElement).value;
     this.aplicarFiltros();
+  }
+
+  abrirAddPostulante(){
+    this.mostrarAddPostulante = true;
+  }
+  cerrarAddPostulante(){
+    this.mostrarAddPostulante = false;
   }
 }
