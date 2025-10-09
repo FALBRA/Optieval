@@ -40,6 +40,8 @@ export class Evaluacion {
 
   evaluacionSeleccionada?: evaluaciones;
 
+  searchTerm: string = '';
+
   abrirAddEvaluacion() {
     this.mostrarAddEvaluacion = true;
   }
@@ -81,5 +83,22 @@ export class Evaluacion {
   }
   cerrarReportEvaluacion() {
     this.mostrarReportEvaluacion = false;
+  }
+
+  aplicarFiltros(){
+    this.dataSource = EVALUACIONES_DATA.filter(evaluacion => {
+      const coincideBusqueda =
+        !this.searchTerm || 
+        evaluacion.entidad.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        evaluacion.fecha.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        evaluacion.id.toString().includes(this.searchTerm) ||
+        evaluacion.nombre.toLowerCase().includes(this.searchTerm.toLowerCase());
+      return coincideBusqueda;
+    });
+  }
+
+  filtrarPorBusqueda(event: Event){
+    this.searchTerm = (event.target as HTMLInputElement).value;
+    this.aplicarFiltros();
   }
 }

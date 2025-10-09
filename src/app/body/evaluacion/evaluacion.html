@@ -7,7 +7,7 @@
             </button>
         </div>
         <div class="buscador">
-            <input type="text" placeholder="Ingrese Busqueda">
+            <input type="text" placeholder="Ingrese Busqueda" (input)="filtrarPorBusqueda($event)">
         </div>
         <div class="table">     
             <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -47,8 +47,8 @@
                         <button class="btn edit" (click)="abrirEditEvaluacion()">
                             <span class="material-icons">edit</span>
                         </button>
-                        <button class="btn delete">
-                            <span class="material-icons" (click)="abrirDeleteEvaluacion()">delete</span>
+                        <button class="btn delete" (click)="abrirDeleteEvaluacion()">
+                            <span class="material-icons">delete</span>
                         </button>
                     </td>
                 </ng-container>
