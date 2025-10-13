@@ -1,1 +1,112 @@
-<p>editpostulante works!</p>
+<section (click)="cerrar()">
+    <div class="modal">
+        <div class="container" (click)="$event.stopPropagation()">
+            <div class="header">
+                <p>EDITAR POSTULANTE </p>
+                <span class="material-icons" (click)="cerrar()">cancel</span>
+            </div>
+            <div class="formulario">
+                <form [formGroup]="editPostulanteForm" (ngSubmit)="onSubmit()">
+                    <div class="labels">
+                        <div class="pagos">
+                            <p>PAGOS</p>
+                            <div class="exoneracion">
+                                <label>
+                                    ¿Se le exonera del pago?
+                                    <select formControlName="exoneracionPostulante">
+                                        <option value="">-- Seleccionar exoneración --</option>
+                                        <option value="1">SI</option>
+                                        <option value="2">PARCIAL</option>
+                                        <option value="3">NO</option>
+                                    </select>
+                                </label>
+                                <div *ngIf="editPostulanteForm.get('exoneracionPostulante')?.invalid && editPostulanteForm.get('exoneracionPostulante')?.touched">Especificar si se le exonera del pago o no.</div>
+                            </div>
+                            <div class="montoPago">
+                                <label>
+                                    Monto a pagar: S/
+                                    <input type="number" placeholder="100" formControlName="montoPostulante">
+                                </label>
+                                <div *ngIf="editPostulanteForm.get('montoPostulante')?.invalid && editPostulanteForm.get('montoPostulante')?.touched">Digitar el pago.</div>
+                            </div>
+                            <div class="modoPago">
+                                <label>
+                                    Modo de pago:
+                                    <input type="text" placeholder="YAPE" formControlName="modoPostulante">
+                                </label>
+                                <div *ngIf="editPostulanteForm.get('modoPostulante')?.invalid && editPostulanteForm.get('modoPostulante')?.touched">Digitar el modo de pago.</div>
+                            </div>
+                        </div>
+                        <div class="personalinfo">
+                            <P>INFORMACIÓN PERSONAL</P>
+                            <div class="dni">
+                                <label>
+                                    DNI:
+                                    <input type="number" placeholder="73991573" formControlName="dniPostulante">
+                                </label>
+                                <div *ngIf="editPostulanteForm.get('dniPostulante')?.invalid && editPostulanteForm.get('dniPostulante')?.touched">Digite el DNI.</div>
+                            </div>
+                            <div class="firstname">
+                                <label>
+                                    NOMBRES:
+                                    <input type="text" placeholder="JOSH GRAJAM" formControlName="namepostulante">
+                                </label>
+                                <div *ngIf="editPostulanteForm.get('namepostulante')?.invalid && editPostulanteForm.get('namepostulante')?.touched">Digite los nombres completos.</div>
+                            </div>
+                            <div class="lastnameF">
+                                <label>
+                                    APELLIDO PATERNO:
+                                    <input type="text" placeholder="FALCÓN" formControlName="lastnameFatherPostulante">
+                                </label>
+                                <div *ngIf="editPostulanteForm.get('lastnameFatherPostulante')?.invalid && editPostulanteForm.get('lastnameFatherPostulante')?.touched">Digite el apellido paterno.</div>
+                            </div>
+                            <div class="lastnameM">
+                                <label>
+                                    APELLIDO MATERNO:
+                                    <input type="text" placeholder="CABRA" formControlName="lastnameMotherPostulante">
+                                </label>
+                                <div *ngIf="editPostulanteForm.get('lastnameMotherPostulante')?.invalid && editPostulanteForm.get('lastnameMotherPostulante')?.touched">Digite el apellido materno.</div>
+                            </div>
+                            <div class="carrera">
+                                <label>
+                                    CARRERA:
+                                    <select formControlName="carreraPostulante">
+                                        <option value="">-- Seleccionar la carrera --</option>
+                                        <option value="1">Medicina humana</option>
+                                        <option value="2">Ing. civil</option>
+                                        <option value="3">Derecho y ciencias políticas</option>
+                                        <option value="4">Educación Inicial</option>
+                                        <option value="5">Odontología</option>
+                                    </select>
+                                </label>
+                                <div *ngIf="editPostulanteForm.get('carreraPostulante')?.invalid && editPostulanteForm.get('carreraPostulante')?.touched">Escoja la carrera.</div>
+                            </div>
+                            <div class="graduation">
+                                <label>
+                                    AÑO DE EGRESO:
+                                    <input type="number" placeholder="2020" formControlName="egresoPostualante">
+                                </label>
+                                <div *ngIf="editPostulanteForm.get('egresoPostualante')?.invalid && editPostulanteForm.get('egresoPostualante')?.touched">Digite el año de egreso.</div>
+                            </div>
+                            <div class="school">
+                                <label>
+                                    COLEGIO:
+                                    <input type="text" placeholder="G.U.E. LEONCIO PRADO" formControlName="schoolPostulante">
+                                </label>
+                                <div *ngIf="editPostulanteForm.get('schoolPostulante')?.invalid && editPostulanteForm.get('schoolPostulante')?.touched">Digite el colegio.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <button class="save" type="submit">
+                            GUARDAR
+                        </button>
+                        <button class="cancel" type="button" (click)="cerrar()">
+                            CANCEL
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

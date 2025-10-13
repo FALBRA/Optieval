@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { NgIf } from "@angular/common";
+import { evaluaciones } from '../evaluacion';
 
 @Component({
   selector: 'app-configevaluacion',
@@ -10,7 +11,7 @@ import { NgIf } from "@angular/common";
   styleUrl: './configevaluacion.css'
 })
 export class Configevaluacion {
-
+  @Input() evaluacion?: evaluaciones;
   @Output() cerrarEvent = new EventEmitter<void>();
 
   cerrar() {

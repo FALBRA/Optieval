@@ -151,3 +151,17 @@ app-addpostulante{
     top: 0;
     left: 0;
 }
+app-editpostulante{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+app-deletepostulante{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

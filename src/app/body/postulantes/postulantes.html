@@ -50,10 +50,10 @@
                         <button class="btn ficha">
                             <span class="material-icons">assignment</span>
                         </button>
-                        <button class="btn edit">
+                        <button class="btn edit" (click)="abrirEditPostulante(element)">
                             <span class="material-icons">edit</span>
                         </button>
-                        <button class="btn delete">
+                        <button class="btn delete" (click)="abrirDeletePostulante(element)">
                             <span class="material-icons">delete</span>
                         </button>
                     </td>
@@ -66,3 +66,5 @@
 </section>
 
 <app-addpostulante *ngIf="mostrarAddPostulante" (cerrarEvent)="cerrarAddPostulante()"></app-addpostulante>
+<app-editpostulante *ngIf="mostrarEditPostulante" [postulante]="postulanteSeleccionado" (cerrarEvent)="cerrarEditPostulante()"></app-editpostulante>
+<app-deletepostulante *ngIf="mostrarDeletePostulante" [postulante]="postulanteSeleccionado" (cerrarEvent)="cerrarDeletePostulante()"></app-deletepostulante>

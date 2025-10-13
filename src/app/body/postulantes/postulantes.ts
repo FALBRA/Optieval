@@ -25,7 +25,7 @@ const POSTULANTES_DATA: postulantes[] = [
 
 @Component({
   selector: 'app-postulantes',
-  imports: [CommonModule, MatTableModule, Addpostulante, NgIf],
+  imports: [CommonModule, MatTableModule, Addpostulante, NgIf, Editpostulante, Deletepostulante],
   templateUrl: './postulantes.html',
   styleUrl: './postulantes.css'
 })
@@ -41,6 +41,8 @@ export class Postulantes {
   mostrarAddPostulante = false;
   mostrarEditPostulante = false;
   mostrarDeletePostulante = false;
+
+  postulanteSeleccionado?: postulantes;
 
   constructor(){
     this.evaluaciones = Array.from(new Set(POSTULANTES_DATA.map(p => p.evaluacion)));
@@ -77,5 +79,21 @@ export class Postulantes {
   }
   cerrarAddPostulante(){
     this.mostrarAddPostulante = false;
+  }
+
+  abrirEditPostulante(postulante: postulantes){
+    this.postulanteSeleccionado = postulante;
+    this.mostrarEditPostulante = true;
+  }
+  cerrarEditPostulante(){
+    this.mostrarEditPostulante = false;
+  }
+
+  abrirDeletePostulante(postulante: postulantes){
+    this.postulanteSeleccionado = postulante;
+    this.mostrarDeletePostulante = true;
+  }
+  cerrarDeletePostulante(){
+    this.mostrarDeletePostulante = false;
   }
 }
