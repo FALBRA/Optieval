@@ -2,12 +2,12 @@
     <div class="modal">
         <div class="container"(click)="$event.stopPropagation()">
             <div class="header">
-                <p>NUEVA EVALUACIÓN</p>
+                <p>ELIMINAR EVALUACIÓN</p>
                 <span class="material-icons" (click)="cerrar()">cancel</span>
             </div>
             <div class="confirm">
-                <p>¿ELIMINAR EVALUACIÓN N° []?</p>
-                <p>[Nombre de la evaluación]</p>
+                <p>¿ELIMINAR EVALUACIÓN N° {{evaluacion?.id}} ?</p>
+                <p>{{evaluacion?.nombre}}</p>
                 <div class="btns">
                     <button class="delete">
                         ELIMINAR

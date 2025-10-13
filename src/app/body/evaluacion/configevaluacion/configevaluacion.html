@@ -2,7 +2,7 @@
     <div class="modal">
         <div class="container" (click)="$event.stopPropagation()">
             <div class="header">
-                <p>CONFIGURACIÓN DE EVALUACIÓN</p>
+                <p>CONFIGURACIÓN DE: {{evaluacion?.nombre}}</p>
                 <span class="material-icons" (click)="cerrar()">cancel</span>
             </div>
             <div class="formulario">
@@ -113,10 +113,10 @@
                         </div>
                     </div>
                     <div class="btns">
-                        <button class="save">
+                        <button class="save" type="submit">
                             GUARDAR
                         </button>
-                        <button class="cancel" (click)="cerrar()">
+                        <button class="cancel" type="button" (click)="cerrar()">
                             CANCEL
                         </button>
                     </div>

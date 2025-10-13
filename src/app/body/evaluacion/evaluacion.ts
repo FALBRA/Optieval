@@ -49,21 +49,24 @@ export class Evaluacion {
     this.mostrarAddEvaluacion = false;
   }
 
-  abrirEditEvaluacion() {
+  abrirEditEvaluacion(evaluacion: evaluaciones) {
+    this.evaluacionSeleccionada = evaluacion;
     this.mostrarEditEvaluacion = true;
   }
   cerrarEditEvaluacion() {
     this.mostrarEditEvaluacion = false;
   }
 
-  abrirDeleteEvaluacion() {
+  abrirDeleteEvaluacion(evaluacion: evaluaciones) {
+    this.evaluacionSeleccionada = evaluacion;
     this.mostrarDeleteEvaluacion = true;
   }
   cerrarDeleteEvaluacion() {
     this.mostrarDeleteEvaluacion = false;
   }
 
-  abrirConfigEvaluacion() {
+  abrirConfigEvaluacion(evaluacion: evaluaciones) {
+    this.evaluacionSeleccionada = evaluacion;
     this.mostrarConfigEvaluacion = true;
   }
   cerrarConfigEvaluacion() {
